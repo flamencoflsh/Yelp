@@ -1,34 +1,30 @@
-### Basic Yelp client
+# Yelp
 
-This is a headless example of how to implement an OAuth 1.0a Yelp API client. The Yelp API provides an application token that allows applications to make unauthenticated requests to their search API.
+Time spent: 20 hours spent in total
 
-### Next steps
+## User Stories
 
-- Check out `BusinessesViewController.swift` to see how to use the `Business` model.
+The following **required** functionality is complete:
 
-### Sample request
+* [X] Table rows should be dynamic height according to the content height.
+* [X] Custom cells should have the proper Auto Layout constraints.
+* [X] Search bar should be in the navigation bar 
+* [X] The filters you should actually have are: category, sort (best match, distance, highest rated), distance, deals (on/off).
+* [X] The filters table should be organized into sections as in the mock.
+* [X] You can use the default UISwitch for on/off states. 
+* [X] Clicking on the "Search" button should dismiss the filters page and trigger the search w/ the new filter settings.
 
-**Basic search with query**
+The following **optional** features are implemented:
+* [X] Infinite scroll for restaurant results
+* [X] Implement map view of restaurant results
+* [X] Distance filter should expand as in the real Yelp app.
+* [X] Distance filter should expand as in the real Yelp app.
+* [X] Implement the restaurant detail page.
 
-```
-Business.searchWithTerm("Thai", completion: { (businesses: [Business]!, error: NSError!) -> Void in
-    self.businesses = businesses
-    
-    for business in businesses {
-        print(business.name!)
-        print(business.address!)
-    }
-})
-```
 
-**Advanced search with categories, sort, and deal filters**
+## Video Walkthroughs 
 
-```
-Business.searchWithTerm("Restaurants", sort: .Distance, categories: ["asianfusion", "burgers"], deals: true) { (businesses: [Business]!, error: NSError!) -> Void in
+All User Stories:<br><br>
+![Alt text]()
 
-    for business in businesses {
-        print(business.name!)
-        print(business.address!)
-    }
-}
-```
+
